@@ -3,7 +3,7 @@ import classes from './posts-grid.module.css';
 
 const PostGrid = (props) => {
   const { posts } = props;
-  console.log(posts);
+
   if (posts !== null && posts !== undefined) {
     return (
       <ul className={classes.grid}>
