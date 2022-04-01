@@ -3,13 +3,17 @@ import classes from './posts-grid.module.css';
 
 const PostGrid = (props) => {
   const { posts } = props;
-
-  return (
-    <ul className={classes.grid}>
-      {posts.map((post) => (
-        <PostItem post={post} key={post.slug} />
-      ))}
-    </ul>
-  );
+  console.log(posts);
+  if (posts !== null && posts !== undefined) {
+    return (
+      <ul className={classes.grid}>
+        {posts.map((post) => (
+          <PostItem post={post} key={post.slug} />
+        ))}
+      </ul>
+    );
+  } else {
+    return <div className={classes.grid}>No posts to show</div>;
+  }
 };
 export default PostGrid;
