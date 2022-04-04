@@ -17,11 +17,13 @@ function Notification(props) {
 
   const cssClasses = `${classes.notification} ${statusClasses}`;
 
-  return (
+  //React portal in conjunction with _document.js is used to inject/render the component anywhere in the component tree in order to e.g. correct HTML semantics
+  return ReactDOM.createPortal(
     <div className={cssClasses}>
       <h2>{title}</h2>
       <p>{message}</p>
-    </div>
+    </div>,
+    document.getElementById('notifications')
   );
 }
 
