@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chalk": "^5.0.1",
     "gray-matter": "^4.0.3",
     "mongodb": "^4.4.1",
     "next": "12.1.0",
