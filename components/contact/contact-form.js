@@ -5,12 +5,7 @@ import classes from './contact-form.module.css';
 const sendContactData = async (contactDetails) => {
   const response = await fetch('/api/contact', {
     method: 'POST',
-    body: contactDetails,
-    // body: JSON.stringify({
-    //   email: enteredEmail,
-    //   name: enteredName,
-    //   message: enteredMessage,
-    // }),
+    body: JSON.stringify(contactDetails),
     headers: {
       'Content-Type': 'application/json',
     },
@@ -28,17 +23,17 @@ const ContactForm = () => {
   const [enteredName, setEnteredName] = useState('');
   const [enteredMessage, setEnteredMessage] = useState('');
   const [requestStatus, setRequestStatus] = useState(); // null/undefined, 'pending', 'success', 'error'
-  const [requestError, setError] = useState();
+  const [requestError, setRequestError] = useState();
 
-  // useEffect(() => {
-  //   if (requestStatus === 'pending' || requestStatus === 'error') {
-  //     const timer = setTimeout(() => {
-  //       setRequestStatus(null);
-  //       setRequestError(null);
-  //     }, 3000);
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [requestStatus]);
+  useEffect(() => {
+    if (requestStatus === 'success' || requestStatus === 'error') {
+      const timer = setTimeout(() => {
+        setRequestStatus(null);
+        setRequestError(null);
+      }, 3000);
+      return () => clearTimeout(timer); //clears timeout in order to not display multiple notifications at once???
+    }
+  }, [requestStatus]);
 
   const sendMessageHandler = async (event) => {
     event.preventDefault();
@@ -51,12 +46,14 @@ const ContactForm = () => {
         name: enteredName,
         message: enteredMessage,
       });
+      setRequestStatus('success');
+      setEnteredMessage('');
+      setEnteredEmail('');
+      setEnteredName('');
     } catch (error) {
-      setError(error.message);
+      setRequestError(error.message);
       setRequestStatus('error');
     }
-
-    setRequestStatus('success');
   };
 
   let notification;
