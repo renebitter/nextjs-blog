@@ -31,7 +31,7 @@ const ContactForm = () => {
         setRequestStatus(null);
         setRequestError(null);
       }, 3000);
-      return () => clearTimeout(timer); //clears timeout in order to not display multiple notifications at once???
+      return () => clearTimeout(timer);
     }
   }, [requestStatus]);
 
