@@ -1,11 +1,11 @@
 .post {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  background-color: var(--color-grey-800);
+  background-color: #cecaca;
   text-align: center;
 }
 
 .post a {
-  color: var(--color-grey-100);
+  color: #343036;
 }
 
 .image {

@@ -13,10 +13,10 @@ const MainNavigation = () => {
       <nav>
         <ul>
           <li>
-            <Link href='/posts'>Posts</Link>
+            <Link href='/posts'>POSTS</Link>
           </li>
           <li>
-            <Link href='/contact'>Contact</Link>
+            <Link href='/contact'>CONTACT</Link>
           </li>
         </ul>
       </nav>
