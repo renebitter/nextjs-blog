@@ -2,8 +2,12 @@
   text-transform: uppercase;
   font-size: var(--size-5);
   font-weight: bold;
-  font-family: 'Oswald', sans-serif;
-  color: var(--color-grey-50);
+  color: var(--color-grey-900);
+  padding-top: 8px;
+}
+
+.logo span img {
+  height: 46px;
 }
 
 @media (min-width: 768px) {

@@ -1,11 +1,20 @@
 .header {
   width: 100%;
-  height: 6rem;
-  background-color: var(--color-grey-900);
+  height: 40px;
+  background-color: rgb(206 202 202);
+  position: sticky;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 100;
+  padding: 5px;
+}
+
+.header .headerInner {
+  max-width: 1100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
+  margin: auto;
 }
 
 .header ul {
@@ -18,20 +27,25 @@
 
 .header li {
   margin: 0 var(--size-4);
+  padding-top: 6px;
 }
 
 .header a {
-  color: var(--color-grey-100);
+  color: var(--color-grey-900);
   font-size: var(--size-4);
 }
 
 .header a:hover,
 .header a:active,
 .header a.active {
-  color: var(--color-grey-200);
+  color: #743029;
 }
 
 @media (min-width: 768px) {
+  .header {
+    height: 45px;
+  }
+
   .header ul {
     gap: 0.5rem;
   }
