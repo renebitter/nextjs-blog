@@ -6,6 +6,10 @@
   padding-top: 8px;
 }
 
+.logo span img {
+  height: 46px;
+}
+
 @media (min-width: 768px) {
   .logo {
     font-size: var(--size-8);

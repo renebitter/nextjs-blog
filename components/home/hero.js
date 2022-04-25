@@ -5,7 +5,7 @@ const Hero = () => {
     <section className={classes.section}>
       <div className={classes.overlay}>
         <div className={classes.hero}>
-          <h1>Bitter Dev Blog</h1>
+          <h1>Markdown Blog</h1>
           <p>
             <small>Web Development • Javascript • React • Next • Node</small>
           </p>

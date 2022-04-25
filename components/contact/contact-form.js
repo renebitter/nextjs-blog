@@ -122,7 +122,9 @@ const ContactForm = () => {
         </div>
 
         <div className={classes.actions}>
-          <button onClick={sendMessageHandler}>Submit</button>
+          <button className='button' onClick={sendMessageHandler}>
+            Submit
+          </button>
         </div>
       </form>
       {notification && (

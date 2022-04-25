@@ -1,7 +1,6 @@
 .contact {
   margin: var(--size-8) auto;
-  border-radius: 6px;
-  background-color: var(--color-grey-100);
+  background-color: rgb(206, 202, 202);
   width: 90%;
   max-width: 50rem;
   padding: var(--size-4);
@@ -17,7 +16,6 @@
 
 .form label {
   display: block;
-  font-family: 'Oswald', sans-serif;
   font-weight: bold;
   margin: var(--size-2) 0 var(--size-1) 0;
 }
@@ -29,7 +27,7 @@
   border-radius: 4px;
   width: 100%;
   border: 1px solid var(--color-grey-400);
-  background-color: var(--color-grey-50);
+  background-color: rgb(230, 230, 230);
   resize: none;
 }
 
@@ -49,10 +47,10 @@
   text-align: right;
 }
 
-.form button {
+/* .form button {
   font: inherit;
   cursor: pointer;
-  background-color: var(--color-primary-700);
+  background-color: rgb(206 202 202);
   border: 1px solid var(--color-primary-700);
   padding: var(--size-2) var(--size-4);
   border-radius: 4px;
@@ -63,7 +61,7 @@
 .form button:hover {
   background-color: var(--color-primary-500);
   border-color: var(--color-primary-500);
-}
+} */
 
 @media (min-width: 768px) {
   .contact h1 {
